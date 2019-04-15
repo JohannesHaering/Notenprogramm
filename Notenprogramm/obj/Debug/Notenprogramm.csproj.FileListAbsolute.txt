@@ -1,0 +1,5 @@
+C:\Users\Johannes\Documents\Projekte\NotenFirma\Notenprogramm\Notenprogramm\obj\Debug\Notenprogramm.csprojAssemblyReference.cache
+C:\Users\Johannes\Documents\Projekte\NotenFirma\Notenprogramm\Notenprogramm\obj\Debug\MainWindow.g.cs
+C:\Users\Johannes\Documents\Projekte\NotenFirma\Notenprogramm\Notenprogramm\obj\Debug\App.g.cs
+C:\Users\Johannes\Documents\Projekte\NotenFirma\Notenprogramm\Notenprogramm\obj\Debug\Notenprogramm_MarkupCompile.cache
+C:\Users\Johannes\Documents\Projekte\NotenFirma\Notenprogramm\Notenprogramm\obj\Debug\Notenprogramm_MarkupCompile.lref

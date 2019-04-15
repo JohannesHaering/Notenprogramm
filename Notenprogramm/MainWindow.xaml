@@ -1,0 +1,25 @@
+﻿<Window x:Class="Notenprogramm.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Notenprogramm"
+        mc:Ignorable="d"
+        Title="Notenprogramm" WindowState="Maximized"
+        Closed="Window_Closed">
+    <Grid>
+        <StackPanel Orientation="Horizontal">
+            <GroupBox Header="Klassenübersicht" Margin="10">
+                <ScrollViewer MaxHeight="700" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+                    <StackPanel Orientation="Vertical" CanHorizontallyScroll="False" CanVerticallyScroll="True">
+                        <StackPanel Orientation="Vertical" Margin="20" Width="260" Name="SP_lessons">
+                        </StackPanel>
+                        <Button Name="BTN_AddLesson" Content="Neue Klasse hinzufügen" Click="BTN_AddLesson_Click" Width="200"  Background="Transparent" BorderBrush="LightGray"/>
+                    </StackPanel>
+                </ScrollViewer>
+            </GroupBox>
+            <GroupBox Header="Klasse" Name="GB_Lesson" Margin="10" Visibility="Visible" VerticalAlignment="Top" MaxHeight="1200">
+            </GroupBox>
+        </StackPanel>
+    </Grid>
+</Window>
