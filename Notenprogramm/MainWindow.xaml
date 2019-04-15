@@ -8,7 +8,7 @@
         Title="Notenprogramm" WindowState="Maximized"
         Closed="Window_Closed">
     <Grid>
-        <StackPanel Orientation="Horizontal">
+        <StackPanel Orientation="Horizontal" Height="506" Margin="0,0,-0.4,-0.4" VerticalAlignment="Bottom">
             <GroupBox Header="Klassenübersicht" Margin="10">
                 <ScrollViewer MaxHeight="700" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
                     <StackPanel Orientation="Vertical" CanHorizontallyScroll="False" CanVerticallyScroll="True">
