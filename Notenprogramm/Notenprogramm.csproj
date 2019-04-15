@@ -54,6 +54,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ChangeGradeHandler.cs" />
     <Compile Include="Grade.cs" />
     <Compile Include="Rating.cs" />
     <Compile Include="StackpanelBuilder.cs" />

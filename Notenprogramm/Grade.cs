@@ -10,54 +10,59 @@ namespace Notenprogramm
 
     public class Grade : Rating
     {
-        private List<Grade> grades;
-        private List<double> bias;
-        private double calculatedGrade;
+        private List<Grade> Grades;
+        private List<double> Bias;
+        private double CalculatedGrade;
 
         private StackPanel stackPanel;
 
         public Grade(GradeType type, double ratio, double average, DateTime time, string name, string description, List<Grade> grades)  : base(type, ratio, average, time, name, description)
         {
-            this.grades = grades;
+            this.Grades = grades;
         }
 
-        public void addGrade(Grade grade)
+        public void AddGrade(Grade grade)
         {
-            grades.Add(grade);
-            calculateGrade();
-            updateStackpanel();
+            Grades.Add(grade);
+            CalculatedGrade = CalculateGrade();
+            UpdateStackpanel();
         }
 
-        public List<Grade> getGrade()
+        public void SetCalculatedGrade(double grade)
         {
-            return grades;
+            CalculatedGrade = grade;
         }
 
-        public double getAverage()
+        public double GetAverage()
         {
-            calculateGrade();
-            return calculatedGrade;
+            CalculatedGrade = CalculateGrade();
+            return CalculatedGrade;
         }
 
-        public double calculateGrade()
+        public List<Grade> GetGrades()
+        {
+            return Grades;
+        }
+
+        public double CalculateGrade()
         {
             double average = 0;
             double biasSum = 0;
 
-            for (int i = 0; i < grades.Count; i++)
+            for (int i = 0; i < Grades.Count; i++)
             {
-                average += grades[i].calculateGrade() * bias[i];
-                biasSum += bias[i];
+                average += Grades[i].CalculateGrade() * Bias[i];
+                biasSum += Bias[i];
             }
 
-            calculatedGrade = average / biasSum;
+            CalculatedGrade = average / biasSum;
 
-            return calculatedGrade;
+            return CalculatedGrade;
         }
 
-        private void updateStackpanel()
+        private void UpdateStackpanel()
         {
-
+            stackPanel = StackpanelBuilder.BuildStackPanelGrades(Grades);
         }
     }
 }
