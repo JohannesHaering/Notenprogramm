@@ -10,26 +10,26 @@ namespace Notenprogramm
 
     public class Rating
     {
-        protected GradeType type;
-        protected double ratio;
-        protected double average;
-        protected DateTime time;
-        protected string name;
-        protected string description;
+        protected GradeType Type;
+        protected double Ratio;
+        protected double Average;
+        protected DateTime Time;
+        protected string Name;
+        protected string Description;
 
         public Rating(GradeType type, double ratio, double average, DateTime time, string name, string description)
         {
-            this.type = type;
-            this.ratio = ratio;
-            this.average = average;
-            this.time = time;
-            this.name = name;
-            this.description = description;
+            Type = type;
+            Ratio = ratio;
+            Average = average;
+            Time = time;
+            Name = name;
+            Description = description;
         }
 
-        public GradeType getType()
+        public GradeType GetType()
         {
-            return type;
+            return Type;
         }
     }
 }

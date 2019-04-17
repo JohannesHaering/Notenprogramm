@@ -55,6 +55,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Grade.cs" />
+    <Compile Include="Handler.cs" />
+    <Compile Include="IOWrapper.cs" />
+    <Compile Include="LessonsWrapper.cs" />
     <Compile Include="Rating.cs" />
     <Compile Include="StackpanelBuilder.cs" />
     <Compile Include="Student.cs" />

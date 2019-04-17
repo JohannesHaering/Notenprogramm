@@ -20,6 +20,8 @@ namespace Notenprogramm
         public MainWindow()
         {
             InitializeComponent();
+
+
         }
 
         private void Window_Closed(object sender, EventArgs e)

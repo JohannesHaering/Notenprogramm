@@ -43,15 +43,15 @@ namespace Notenprogramm
         {
             grades.Add(grade);
 
-            if (grade.getType().Equals(GradeType.exam))
+            if (grade.GetType().Equals(GradeType.exam))
             {
                 examGrade.addGrade(grade);
             }
-            if (grade.getType().Equals(GradeType.oral))
+            if (grade.GetType().Equals(GradeType.oral))
             {
                 oralGrade.addGrade(grade);
             }
-            if (grade.getType().Equals(GradeType.extra))
+            if (grade.GetType().Equals(GradeType.extra))
             {
                 extraGrade.addGrade(grade);
             }
