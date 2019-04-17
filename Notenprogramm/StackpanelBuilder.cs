@@ -19,13 +19,25 @@ namespace Notenprogramm
         /// </summary>
         private const int LessonsWidth = 120;
         /// <summary>
-                                             /// Height of a button of a lesson in px
-                                             /// </summary>
+        /// Height of a button of a lesson in px
+        /// </summary>
         private const int ButtonHeight = 20;
         /// <summary>
         /// Width of the delete button in px
         /// </summary>
         private const int DeleteWidth = 20;
+        /// <summary>
+        /// Margin right and left in px
+        /// </summary>
+        private const int MarginHorizontal = 10;
+        /// <summary>
+        /// Margin up and down in px
+        /// </summary>
+        private const int MarginVertical = 5;
+        /// <summary>
+        /// Symbol of deleting
+        /// </summary>
+        private const string DeleteSymbol = "X";
 
         public static StackPanel buildStackpanelGrades(Grade grade)
         {
@@ -46,7 +58,7 @@ namespace Notenprogramm
             StackPanel builtStackpanel = new StackPanel();
             builtStackpanel.Orientation = Orientation.Vertical;
 
-            foreach(Lesson lesson in lessons)
+            foreach (Lesson lesson in lessons)
             {
                 builtStackpanel.Children.Add(BuildStackpanelLesson(lesson, new Handler(lessons, lesson)));
             }
@@ -68,11 +80,11 @@ namespace Notenprogramm
             Button buttonChooseLesson = new Button();
             buttonChooseLesson.Content = lesson.ClassName;
             buttonChooseLesson.Width = LessonsWidth;
-            buttonChooseLesson.Margin = new Thickness(10, 5, 20, 0);
+            buttonChooseLesson.Margin = new Thickness(MarginHorizontal, MarginVertical, MarginHorizontal, MarginVertical);
             buttonChooseLesson.Click += new RoutedEventHandler(handler.ChooseLessonClick);
 
             Button buttonDeleteClass = new Button();
-            buttonDeleteClass.Content = "X";
+            buttonDeleteClass.Content = DeleteSymbol;
             buttonDeleteClass.Width = DeleteWidth;
             buttonDeleteClass.Height = ButtonHeight;
             buttonDeleteClass.Click += new RoutedEventHandler(handler.DeleteLessonClick);
