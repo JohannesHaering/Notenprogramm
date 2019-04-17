@@ -78,7 +78,7 @@ namespace Notenprogramm
             builtStackpanel.Orientation = Orientation.Horizontal;
 
             Button buttonChooseLesson = new Button();
-            buttonChooseLesson.Content = lesson.ClassName;
+            buttonChooseLesson.Content = lesson.LessonName;
             buttonChooseLesson.Width = LessonsWidth;
             buttonChooseLesson.Margin = new Thickness(MarginHorizontal, MarginVertical, MarginHorizontal, MarginVertical);
             buttonChooseLesson.Click += new RoutedEventHandler(handler.ChooseLessonClick);

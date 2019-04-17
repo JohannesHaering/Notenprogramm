@@ -1,0 +1,35 @@
+﻿<Window x:Class="Notenprogramm.CreatingLesson"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Notenprogramm"
+        mc:Ignorable="d"
+        Title="Neue Klasse" Height="500" Width="500">
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <GroupBox Header="Klassenparameter" Margin="50,30,50,30">
+                <StackPanel Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal" Margin="10">
+                        <Label Content="Klassenname: " Width="150" Margin="10"/>
+                        <TextBox Name="TB_lessonName" Width="160" Margin="10"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="10">
+                        <Label Content="Anzahl Schüler: " Width="150" Margin="10"/>
+                        <TextBox Name="TB_studentsNumber" Width="160" Margin="10"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="10" >
+                        <Label Content="schriftlich : mündlich" Width="150" Margin="10"/>
+                        <TextBox Name="TB_exam" Width="60" Margin="10"/>
+                        <Label Content=" : " Margin="0,10,0,10"/>
+                        <TextBox Name="TB_oral" Width="60" Margin="10"/>
+                    </StackPanel>
+                </StackPanel>
+            </GroupBox>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Name="BTN_Close" Content="Abbrechen" Width="80" Click="BTN_Close_Click"  Margin="10" Background="Transparent" BorderBrush="LightGray"/>
+                <Button Name="BTN_Save" Content="Hinzufügen" Width="80" Click="BTN_Save_Click" Margin="10" Background="Transparent" BorderBrush="LightGray"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

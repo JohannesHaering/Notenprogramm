@@ -54,6 +54,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="CreatingLesson.xaml.cs">
+      <DependentUpon>CreatingLesson.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Grade.cs" />
     <Compile Include="Handler.cs" />
     <Compile Include="IOWrapper.cs" />
@@ -61,6 +64,10 @@
     <Compile Include="Rating.cs" />
     <Compile Include="StackpanelBuilder.cs" />
     <Compile Include="Student.cs" />
+    <Page Include="CreatingLesson.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

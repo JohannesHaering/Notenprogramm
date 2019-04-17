@@ -10,18 +10,22 @@ namespace Notenprogramm
 {
     public class Lesson
     {
-        public string ClassName { get; set; }
+        public string LessonName { get; set; }
         public int StudentsNumber { get; set; }
         public double OralRatio { get; set; }
         public double ExamRatio { get; set; }
         public List<TStudent> Students { get; set; }
-        public StackPanel Stackpanel { get; set; }
+
+        public Lesson()
+        {
+
+        }
 
         public Lesson(string className, int studentsNumber, int oralRatio, int examRatio, StackPanel stackpanel)
         {
             Students = new List<TStudent>();
 
-            ClassName = className;
+            LessonName = className;
             StudentsNumber = studentsNumber;
             OralRatio = oralRatio;
             ExamRatio = examRatio;
@@ -31,9 +35,11 @@ namespace Notenprogramm
             }
         }
 
-        public void Show()
+        public StackPanel Show()
         {
+            StackPanel stackPanel = new StackPanel();
 
+            return stackPanel;
         }
     }
 }
