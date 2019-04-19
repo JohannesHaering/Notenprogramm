@@ -17,19 +17,22 @@ namespace Notenprogramm
 {
     public partial class MainWindow : Window
     {
+        private LessonsWrapper LessonsWrapper;
         public MainWindow()
         {
             InitializeComponent();
+
+            LessonsWrapper = new LessonsWrapper(SP_lessons, SP_showLesson);
         }
 
         private void Window_Closed(object sender, EventArgs e)
         {
-
+            LessonsWrapper.Save();
         }
 
         private void BTN_AddLesson_Click(object sender, RoutedEventArgs e)
         {
-
+            LessonsWrapper.AddLesson();
         }
     }
 }

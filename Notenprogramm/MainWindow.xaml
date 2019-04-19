@@ -19,6 +19,7 @@
                 </ScrollViewer>
             </GroupBox>
             <GroupBox Header="Klasse" Name="GB_Lesson" Margin="10" Visibility="Visible" VerticalAlignment="Top" MaxHeight="1200">
+                <StackPanel Name="SP_showLesson"></StackPanel>
             </GroupBox>
         </StackPanel>
     </Grid>
