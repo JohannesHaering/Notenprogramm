@@ -27,8 +27,9 @@ namespace Notenprogramm
             CreateLessonWindow createLessonWindow = new CreateLessonWindow(newLesson);
             createLessonWindow.ShowDialog();
 
+            newLesson.CreateViewHolder(new Handler(Lessons, newLesson));
             Lessons.Add(newLesson);
-            StackpanelLessonsOrganisation.Children.Add(newLesson.ShowOrganisation(new Handler(Lessons, newLesson)));
+            StackpanelLessonsOrganisation.Children.Add(newLesson.ShowOrganisation());
         }
 
         public void Save()

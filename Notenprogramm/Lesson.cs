@@ -15,8 +15,7 @@ namespace Notenprogramm
         public double OralRatio { get; set; }
         public double ExamRatio { get; set; }
         public List<TStudent> Students { get; set; }
-        public StackPanel StackPanelOrganisation { get; set; }
-        public StackPanel StackPanelDetailed { get; set; }
+        public ViewHolderLesson ViewHolderLesson { get; private set; }
 
         public Lesson()
         {
@@ -33,11 +32,39 @@ namespace Notenprogramm
             ExamRatio = examRatio;
         }
 
-        public StackPanel ShowOrganisation(Handler handler)
+        public void CreateViewHolder(Handler handler)
         {
-            if(StackPanelOrganisation == null)
+            ViewHolderLesson = new ViewHolderLesson(handler);
+        }
+
+        public StackPanel ShowOrganisation()
+        {
+            return ViewHolderLesson.ShowOrganisation();
+        }
+
+        public StackPanel ShowDetailed()
+        {
+            return ViewHolderLesson.ShowDetailed();
+        }
+    }
+
+    public class ViewHolderLesson
+    {
+        private Handler Handler;
+        public StackPanel StackPanelOrganisation { get; private set; }
+        public StackPanel StackPanelDetailed { get; private set; }
+        
+
+        public ViewHolderLesson(Handler handler)
+        {
+            Handler = handler;
+        }
+
+        public StackPanel ShowOrganisation()
+        {
+            if (StackPanelOrganisation == null)
             {
-                StackPanelOrganisation = StackpanelBuilder.BuildStackpanelLesson(this, handler);
+                StackPanelOrganisation = StackpanelBuilder.BuildStackpanelLesson(Handler.Lesson, Handler);
             }
 
             return StackPanelOrganisation;
@@ -45,7 +72,7 @@ namespace Notenprogramm
 
         public StackPanel ShowDetailed()
         {
-            if(StackPanelDetailed == null)
+            if (StackPanelDetailed == null)
             {
                 // TODO: Missing Implementation of the detailed show builder
             }

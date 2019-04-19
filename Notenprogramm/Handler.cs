@@ -10,25 +10,25 @@ namespace Notenprogramm
 {
     public class Handler
     {
-        public List<Lesson> lessons { get; set; }
-        public Lesson lesson { get; set; }
+        public List<Lesson> Lessons { get; set; }
+        public Lesson Lesson { get; set; }
 
         public Handler(List<Lesson> lessons, Lesson lesson)
         {
-            this.lessons = lessons;
-            this.lesson = lesson;
+            this.Lessons = lessons;
+            this.Lesson = lesson;
         }
 
         public void ChooseLessonClick(object sender, RoutedEventArgs args)
         {
-            lesson.ShowDetailed();
+            Lesson.ShowDetailed();
         }
 
         public void DeleteLessonClick(object sender, RoutedEventArgs args)
         {
-            (lesson.StackPanelOrganisation.Parent as StackPanel).Children.Remove(lesson.StackPanelOrganisation);
-            lessons.Remove(lesson);
-            lesson = null;
+            (Lesson.ViewHolderLesson.StackPanelOrganisation.Parent as StackPanel).Children.Remove(Lesson.ViewHolderLesson.StackPanelOrganisation);
+            Lessons.Remove(Lesson);
+            Lesson = null;
         }
     }
 }
