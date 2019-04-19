@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
 
 namespace Notenprogramm
 {
@@ -20,14 +21,14 @@ namespace Notenprogramm
 
         public void ChooseLessonClick(object sender, RoutedEventArgs args)
         {
-            lesson.Show();
+            lesson.ShowDetailed();
         }
 
         public void DeleteLessonClick(object sender, RoutedEventArgs args)
         {
-            lesson.Stackpanel = null;
-            lesson = null;
+            (lesson.StackPanelOrganisation.Parent as StackPanel).Children.Remove(lesson.StackPanelOrganisation);
             lessons.Remove(lesson);
+            lesson = null;
         }
     }
 }

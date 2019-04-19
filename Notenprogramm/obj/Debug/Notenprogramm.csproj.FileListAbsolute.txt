@@ -3,3 +3,15 @@ C:\Users\Johannes\Documents\Projekte\NotenFirma\Notenprogramm\Notenprogramm\obj\
 C:\Users\Johannes\Documents\Projekte\NotenFirma\Notenprogramm\Notenprogramm\obj\Debug\App.g.cs
 C:\Users\Johannes\Documents\Projekte\NotenFirma\Notenprogramm\Notenprogramm\obj\Debug\Notenprogramm_MarkupCompile.cache
 C:\Users\Johannes\Documents\Projekte\NotenFirma\Notenprogramm\Notenprogramm\obj\Debug\Notenprogramm_MarkupCompile.lref
+C:\Users\Johannes\Documents\Projekte\NotenFirma\Notenprogramm\Notenprogramm\obj\Debug\CreateLessonWindow.g.cs
+C:\Users\Johannes\Documents\Projekte\NotenFirma\Notenprogramm\Notenprogramm\bin\Debug\Notenprogramm.exe.config
+C:\Users\Johannes\Documents\Projekte\NotenFirma\Notenprogramm\Notenprogramm\bin\Debug\Notenprogramm.exe
+C:\Users\Johannes\Documents\Projekte\NotenFirma\Notenprogramm\Notenprogramm\bin\Debug\Notenprogramm.pdb
+C:\Users\Johannes\Documents\Projekte\NotenFirma\Notenprogramm\Notenprogramm\obj\Debug\MainWindow.baml
+C:\Users\Johannes\Documents\Projekte\NotenFirma\Notenprogramm\Notenprogramm\obj\Debug\CreateLessonWindow.baml
+C:\Users\Johannes\Documents\Projekte\NotenFirma\Notenprogramm\Notenprogramm\obj\Debug\Notenprogramm.g.resources
+C:\Users\Johannes\Documents\Projekte\NotenFirma\Notenprogramm\Notenprogramm\obj\Debug\Notenprogramm.Properties.Resources.resources
+C:\Users\Johannes\Documents\Projekte\NotenFirma\Notenprogramm\Notenprogramm\obj\Debug\Notenprogramm.csproj.GenerateResource.cache
+C:\Users\Johannes\Documents\Projekte\NotenFirma\Notenprogramm\Notenprogramm\obj\Debug\Notenprogramm.csproj.CoreCompileInputs.cache
+C:\Users\Johannes\Documents\Projekte\NotenFirma\Notenprogramm\Notenprogramm\obj\Debug\Notenprogramm.exe
+C:\Users\Johannes\Documents\Projekte\NotenFirma\Notenprogramm\Notenprogramm\obj\Debug\Notenprogramm.pdb

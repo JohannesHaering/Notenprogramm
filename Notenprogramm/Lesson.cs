@@ -10,36 +10,47 @@ namespace Notenprogramm
 {
     public class Lesson
     {
-        public string LessonName { get; set; }
+        public string ClassName { get; set; }
         public int StudentsNumber { get; set; }
         public double OralRatio { get; set; }
         public double ExamRatio { get; set; }
         public List<TStudent> Students { get; set; }
+        public StackPanel StackPanelOrganisation { get; set; }
+        public StackPanel StackPanelDetailed { get; set; }
 
         public Lesson()
         {
 
         }
 
-        public Lesson(string className, int studentsNumber, int oralRatio, int examRatio, StackPanel stackpanel)
+        public Lesson(string className, int studentsNumber, int oralRatio, int examRatio)
         {
             Students = new List<TStudent>();
 
-            LessonName = className;
+            ClassName = className;
             StudentsNumber = studentsNumber;
             OralRatio = oralRatio;
             ExamRatio = examRatio;
-
-            for (int i = 0; i < StudentsNumber; i++)
-            {
-            }
         }
 
-        public StackPanel Show()
+        public StackPanel ShowOrganisation(Handler handler)
         {
-            StackPanel stackPanel = new StackPanel();
+            if(StackPanelOrganisation == null)
+            {
+                StackPanelOrganisation = StackpanelBuilder.BuildStackpanelLesson(this, handler);
+            }
 
-            return stackPanel;
+            return StackPanelOrganisation;
+        }
+
+        public StackPanel ShowDetailed()
+        {
+            if(StackPanelDetailed == null)
+            {
+                // TODO: Missing Implementation of the detailed show builder
+            }
+
+            return StackPanelDetailed;
         }
     }
 }

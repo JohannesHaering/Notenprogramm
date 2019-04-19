@@ -17,11 +17,11 @@ namespace Notenprogramm
     /// <summary>
     /// Interaction logic for CreatingLesson.xaml
     /// </summary>
-    public partial class CreatingLesson : Window
+    public partial class CreateLessonWindow : Window
     {
         private Lesson Lesson;
 
-        public CreatingLesson(Lesson lesson)
+        public CreateLessonWindow(Lesson lesson)
         {
             InitializeComponent();
 
@@ -30,18 +30,15 @@ namespace Notenprogramm
 
         private void BTN_Save_Click(object sender, RoutedEventArgs e)
         {
-            Lesson.LessonName = TB_lessonName.Text;
-
+            Lesson.ClassName = TB_lessonName.Text;
             try
             {
                 Lesson.StudentsNumber = int.Parse(TB_studentsNumber.Text);
             }
             catch
             {
-                MessageBox.Show("Geben Sie bitte eine integrale Zahl ein.");
-                return;
+                MessageBox.Show("Bitte geben Sie eine integrale Zahl ein.");
             }
-
             try
             {
                 Lesson.ExamRatio = double.Parse(TB_exam.Text);
@@ -49,8 +46,7 @@ namespace Notenprogramm
             }
             catch
             {
-                MessageBox.Show("Bitte geben Sie eine rationale Zahl ein.");
-                return;
+                MessageBox.Show("Bitte geben Sie eine rationale Zahl ein");
             }
 
             Close();

@@ -9,19 +9,31 @@ namespace Notenprogramm
 {
     public class LessonsWrapper
     {
-        public StackPanel Stackpanel { get; set; }
+        public StackPanel StackpanelLessonsOrganisation { get; set; }
+        public StackPanel StackpanelLessonShow { get; set; }
         private List<Lesson> Lessons { get; set; }
 
-        public LessonsWrapper(StackPanel stackPanel)
+        public LessonsWrapper(StackPanel stackPanelOrganisation, StackPanel stackPanelShow)
         {
-            Stackpanel = stackPanel;
+            StackpanelLessonsOrganisation = stackPanelOrganisation;
+            StackpanelLessonShow = stackPanelShow;
             Lessons = IOWrapper.GetLessons();
-            Stackpanel.Children.Add(StackpanelBuilder.BuildStackpanelLessons(Lessons));
+            StackpanelLessonsOrganisation.Children.Add(StackpanelBuilder.BuildStackpanelLessons(Lessons));
         }   
         
         public void AddLesson()
         {
-            // TODO: New Window for adding a new lesson
+            Lesson newLesson = new Lesson();
+            CreateLessonWindow createLessonWindow = new CreateLessonWindow(newLesson);
+            createLessonWindow.ShowDialog();
+
+            Lessons.Add(newLesson);
+            StackpanelLessonsOrganisation.Children.Add(newLesson.ShowOrganisation(new Handler(Lessons, newLesson)));
+        }
+
+        public void Save()
+        {
+            IOWrapper.Save(Lessons);
         }
     }
 }

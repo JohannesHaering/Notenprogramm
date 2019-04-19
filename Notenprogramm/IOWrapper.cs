@@ -16,5 +16,10 @@ namespace Notenprogramm
 
             return lessons;
         }
+
+        public static void Save(List<Lesson> lessons)
+        {
+            // TODO: Implement Saver
+        }
     }
 }
